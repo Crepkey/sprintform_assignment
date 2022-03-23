@@ -30,13 +30,13 @@ const TitleLine = styled.div`
 `;
 
 interface PageTitleProps {
-	text: string;
+	children: string;
 }
 
-export default function PageTitle({ text }: PageTitleProps) {
+export default function PageTitle({ children }: PageTitleProps) {
 	return (
 		<MainContainer>
-			<Title>{text}</Title>
+			<Title>{children}</Title>
 			<TitleLine />
 		</MainContainer>
 	);

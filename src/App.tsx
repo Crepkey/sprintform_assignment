@@ -13,7 +13,7 @@ const MainContainer = styled.div`
 function App() {
 	return (
 		<MainContainer>
-			<PageTitle text={"FIZZ BUZZ FINDER"} />
+			<PageTitle>FIZZ BUZZ FINDER</PageTitle>
 		</MainContainer>
 	);
 }
