@@ -1,15 +1,16 @@
 /* Interfaces */
-import { fizzBuzzValues } from "../../utils/interfaces";
+import { ColorCodeType, fizzBuzzValues } from "../../utils/interfaces";
 
 /* Styles */
 import styled from "styled-components";
 import { colors } from "../../utils/colors";
 
-const MainContainer = styled.div`
+const MainContainer = styled.div<{ fontColor: string }>`
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+	color: ${({ fontColor }) => fontColor};
 	border: 1px solid ${colors.cardBorder};
 	border-radius: 5px;
 	width: 50px;
@@ -27,5 +28,17 @@ interface CardProps {
 }
 
 export default function Card({ value }: CardProps) {
-	return <MainContainer>{value}</MainContainer>;
+	const fontColor: ColorCodeType = (() => {
+		switch (value) {
+			case "Fizz":
+				return colors.red;
+			case "Buzz":
+				return colors.blue;
+			case "Fizz Buzz":
+				return colors.orange;
+			default:
+				return colors.numberFont;
+		}
+	})();
+	return <MainContainer fontColor={fontColor}>{value}</MainContainer>;
 }
