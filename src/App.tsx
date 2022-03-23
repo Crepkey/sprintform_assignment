@@ -1,7 +1,17 @@
-import styled from "styled-components";
+import { useEffect, useState } from "react";
+
+/* Comps */
 import PageTitle from "./comps/PageTitle";
-import { colors } from "./utils/colors";
-import { breakePoints } from "./utils/utils";
+
+/* Utils */
+import range from "lodash/range";
+
+/* Interfaces */
+import { fizzBuzzValues } from "./utils/interfaces";
+
+/* Styles */
+import styled from "styled-components";
+import Card from "./comps/common/Card";
 
 const MainContainer = styled.div`
 	display: flex;
@@ -23,366 +33,52 @@ const CardContainer = styled.div`
 	margin-bottom: 30px;
 `;
 
-const Card = styled.div`
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	border: 1px solid ${colors.cardBorder};
-	border-radius: 5px;
-	width: 50px;
-	height: 50px;
-	transition: all 0.3s ease;
-	:hover {
-		margin-left: 0;
-		cursor: pointer;
-		border-left: 3px solid ${colors.red};
-	}
-`;
+const inputNumbers: number[] = range(1, 101, 1);
 
 function App() {
+	const [fizzBuzzValues, setFizzBuzzValues] = useState<fizzBuzzValues[]>([]);
+
+	useEffect(() => {
+		const fizzBuzzValues: fizzBuzzValues[] = calculateFizzBuzz(inputNumbers);
+		setFizzBuzzValues(fizzBuzzValues);
+	}, []);
+
+	function calculateFizzBuzz(numbers: number[]): fizzBuzzValues[] {
+		const result: fizzBuzzValues[] = [];
+		for (const num of numbers) {
+			if (num % 5 === 0 && num % 3 === 0) {
+				result.push("Fizz Buzz");
+				continue;
+			}
+			if (num % 5 === 0) {
+				result.push("Buzz");
+				continue;
+			}
+			if (num % 3 === 0) {
+				result.push("Fizz");
+				continue;
+			}
+			result.push(num);
+		}
+
+		return result;
+	}
+
+	/* With this line of code we can skip a useless render when the fizzBuzzValues array is empty */
+	if (fizzBuzzValues.length === 0) return null;
+
 	return (
 		<MainContainer>
 			<PageTitle>FIZZ BUZZ FINDER</PageTitle>
 			<CardContainer>
-				<Card>1</Card>
-				<Card>Fizz</Card>
-				<Card>3</Card>
-				<Card>Buzz</Card>
-				<Card>1</Card>
-				<Card>Fizz Buzz</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>3</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>3</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>3</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>3</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>3</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>3</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>3</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>3</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>3</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>3</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>3</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>3</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
-				<Card>1</Card>
+				{fizzBuzzValues.map((num: fizzBuzzValues, index: number) => (
+					/* 
+            I know it's weird that I've used the index number as a key
+            but in that case this is not a problem because it's unique and I am going to modify the list at all.
+            But it's anti pattern in real apps.
+          */
+					<Card key={index} value={num} />
+				))}
 			</CardContainer>
 		</MainContainer>
 	);
