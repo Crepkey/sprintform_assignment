@@ -1,4 +1,3 @@
-import "./App.css";
 import styled from "styled-components";
 import PageTitle from "./comps/common/PageTitle";
 import { colors } from "./utils/colors";
@@ -13,16 +12,26 @@ const MainContainer = styled.div`
 `;
 
 const CardContainer = styled.div`
-	display: flex;
+	display: grid;
+	grid-gap: 30px;
+	justify-content: center;
+	grid-template-columns: repeat(auto-fill, 50px);
+	width: 90%;
+	min-height: 0;
+	min-width: 0;
+	overflow: auto;
+	margin-bottom: 30px;
 `;
 
 const Card = styled.div`
 	display: flex;
-	width: 80px;
-	height: 80px;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 	border: 1px solid ${colors.cardBorder};
 	border-radius: 5px;
-	padding: 10px;
+	width: 50px;
+	height: 50px;
 	transition: all 0.3s ease;
 	:hover {
 		margin-left: 0;
@@ -36,6 +45,343 @@ function App() {
 		<MainContainer>
 			<PageTitle>FIZZ BUZZ FINDER</PageTitle>
 			<CardContainer>
+				<Card>1</Card>
+				<Card>Fizz</Card>
+				<Card>3</Card>
+				<Card>Buzz</Card>
+				<Card>1</Card>
+				<Card>Fizz Buzz</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>3</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>3</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>3</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>3</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>3</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>3</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>3</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>3</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>3</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>3</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>3</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>3</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
+				<Card>1</Card>
 				<Card>1</Card>
 			</CardContainer>
 		</MainContainer>
