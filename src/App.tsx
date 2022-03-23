@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import PageTitle from "./comps/common/PageTitle";
+import PageTitle from "./comps/PageTitle";
 import { colors } from "./utils/colors";
 import { breakePoints } from "./utils/utils";
 
