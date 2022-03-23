@@ -1,5 +1,6 @@
 import "./App.css";
 import styled from "styled-components";
+import PageTitle from "./comps/common/PageTitle";
 
 const MainContainer = styled.div`
 	display: flex;
@@ -10,7 +11,11 @@ const MainContainer = styled.div`
 `;
 
 function App() {
-	return <MainContainer>VALAMI</MainContainer>;
+	return (
+		<MainContainer>
+			<PageTitle text={"FIZZ BUZZ FINDER"} />
+		</MainContainer>
+	);
 }
 
 export default App;
